@@ -55,7 +55,7 @@ const ChatLayout = ({ defaultLayout = [320, 480] }: ChatLayoutProps) => {
         }}
         onExpand={() => {
           setIsCollapsed(false);
-          document.cookie = `react-resizable-panels:collapsed=fakse; `;
+          document.cookie = `react-resizable-panels:collapsed=false; `;
         }}
         className={cn(
           isCollapsed && "min-w-[80px] transition-all duration-300 ease-in-out"
