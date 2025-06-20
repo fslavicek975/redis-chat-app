@@ -1,11 +1,13 @@
 "use client";
 
+import Sidebar from "@/components/Sidebar";
 import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
 import { cn } from "@/lib/utils";
+
 import React, { useEffect, useState } from "react";
 
 interface ChatLayoutProps {
@@ -61,7 +63,7 @@ const ChatLayout = ({ defaultLayout = [320, 480] }: ChatLayoutProps) => {
           isCollapsed && "min-w-[80px] transition-all duration-300 ease-in-out"
         )}
       >
-        Sidebar
+        <Sidebar isCollapsed={isCollapsed}/>
       </ResizablePanel>
       <ResizableHandle withHandle></ResizableHandle>
       <ResizablePanel defaultSize={defaultLayout[1]} minSize={30}>
